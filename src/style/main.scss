@@ -1,0 +1,3303 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_png-sprite.scss";
+@import "_sprite.scss";
+
+@mixin respond-to($media) {
+    @media only screen and (max-width: $media) { @content; }
+}
+
+body {
+	font-family: 'DINpro';
+}
+.header {
+	width: 1170px ;
+	margin: 0 auto;
+	padding: 4px 0 5px 0;
+	display: flex;
+	justify-content: space-between;
+
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	&_logo {
+		width: 180px;
+		padding: 65px 0 0 0 ;
+		position: relative;
+		text-align: center;
+
+		@include respond-to(479px) {
+			width: auto;
+		}
+
+		&:before {
+		    @include sprite($png-icon-header-logo);
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 0px;
+			width: 163px;
+			height: 66px;
+		    left: 50%;
+		    margin: 0 0 0 -82px;
+		}
+
+		&__title {
+			font-size: 22px;
+			text-transform: uppercase;
+			color: #000;
+			font-weight: bold;
+		}
+		&__subtitle {
+			font-size: 18px;
+			font-family: 'DINpro-Medium';
+			color:#000;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		position: relative;
+		align-items: center;
+
+		&_toggle_button {
+			display: none;
+			width: 140px;
+			height: 60px;
+			cursor: pointer;
+			border: 1px solid #604b38;
+			border-radius: 4px;
+			justify-content: center;
+			margin: 0 0 0 0;
+    		align-items: center;
+
+			@include respond-to(1076px) {
+				display: flex;
+			}
+			@include respond-to(767px) {
+				width: 50px;
+				height: 50px;			
+			}
+			@include respond-to(479px) {
+				margin: 20px auto;		
+			}
+		}
+	}	
+}
+
+.hamburger {
+
+	&__icon {
+		top: 0px;
+		left: 0px;
+		width: 40px;
+		height: 32px;
+		padding: 6px 0 0 0 ;
+		// background: rgba(0,0,0,.6);
+		cursor: pointer;
+		z-index: 6;
+		
+
+		@include respond-to(767px) {
+			margin: 0 0px 0 0;
+		}
+	}
+	&__text {
+		font-size: 18px;
+		font-family: 'DINpro-Medium';
+		margin: 0 0px 0 4px;
+
+		@include respond-to(767px) {
+			display: none;
+		}
+	}
+
+	&__line {
+		display: block;
+		width: 30px;
+		height: 3px;
+		margin: 8px 0 1px 5px; 
+		background: #000;
+
+		&:first-child {
+			margin: 0px 0 1px 4px;
+		}
+	}
+}
+	
+.nav {
+	display: flex;
+
+	@include respond-to(1076px) {
+		visibility: hidden;
+		height: 0px;
+		flex-direction: column;
+		position: absolute;
+		overflow: hidden;
+		top: 85px;
+		left: -90px;
+		border-top: 3px solid #d6ab19;
+		background: #fff;
+		padding: 20px 0 20px 00px; 
+		width: 320px;
+		box-shadow: 0px 0px 5px 0px #aaa;
+		transition: all 0.3s ease-in-out; 
+	}
+	@include respond-to(767px) {
+		left: -135px;
+	}
+	@include respond-to(489px) {
+		left: 50%;
+	    margin: 0 0 0 -160px;
+	}
+	
+	&-open {
+		display: flex;
+		visibility: visible;
+		transition: height 0.3s ease-in-out; 
+		height: 210px; 
+	}
+
+	&__item {
+		margin: 0px 0px 0 27px;
+
+		@include respond-to(1187px) {
+			margin: 0px 0px 0 15px;
+		}
+		@include respond-to(1076px) {
+			margin: 2px 0px 0px 0px;
+		}
+	}
+	&__link {
+		font-size: 16px;
+		line-height: 18px;
+		color: #000;
+		text-decoration: none;
+		font-family: 'DINpro-Medium';
+		position: relative;
+		padding: 5px 0 6px;
+		display: block;
+
+		@include respond-to(1076px) {
+			padding: 15px 0 17px 20px;
+    		font-size: 19px;
+		}
+
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			width: 0px;
+			height: 2px;
+			background: #d6aa19;
+			transition: all 0.2s ease-in-out; 
+		}
+		&:hover:after {
+			width: 100%;
+		}
+	}
+}
+
+.contact {
+	text-align: center;
+	width: 205px;
+
+	@include respond-to(479px) {
+		margin: 0 auto;
+	}
+
+	&__text {
+		font-size: 16px;
+		color: #000;
+		line-height: 28px;
+	}
+	&__number {
+		font-size: 25px;
+		line-height: 20px;
+		color: #000;
+		font-family: 'DINPro-Black';
+		text-decoration: none;
+		display: inline-block;
+		margin: 10px 0 3px 0;
+
+		@include respond-to(767px) {
+			margin: 10px 0 7px 0;
+		}
+		@include respond-to(479px) {
+			margin: 10px 0 10px 0;
+		}
+	}
+	&__callback {
+		width: 200px;
+		font-size: 16px;
+		color: #000;
+		line-height: 28px;
+		text-decoration: none;
+		border-bottom: 1px dashed #3ca43c;
+
+		@include respond-to(767px) {
+			font-size: 20px;
+		}
+		@include respond-to(479px) {
+			font-size: 22px;
+		}
+
+		&:hover {
+			border-bottom: none;
+		}
+	}
+}
+
+
+.baner {
+	width: 100%;
+	height: 786px;
+	background: url(../img/bg-1.png);
+	background-size: cover;
+	box-shadow: inset 0px 5px 6px -3px rgba(0,0,0,.4);
+	
+	@include respond-to(1010px) {
+		height: 990px;
+	}
+	@include respond-to(767px) {
+		// width: 470px;
+	}
+	@include respond-to(479px) {
+		// width: 100%;
+	}
+
+	&__content {
+		width: 1170px ;
+		margin: 0 auto;
+		padding: 1px 0 0px 0;
+
+		@include respond-to(1187px) {
+			width: 1060px;
+		}
+		@include respond-to(1076px) {
+			width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 750px;
+		}
+		@include respond-to(767px) {
+			width: 470px;
+		}
+		@include respond-to(479px) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		font-size: 54px;
+		line-height: 62px;
+		font-weight: bold;
+		color: #000;
+		background: rgba(255,255,255,.9);
+		padding: 4px 185px 20px;
+		text-align: center;
+		margin: 45px 0 0 0;
+
+		@include respond-to(1187px) {
+			padding: 4px 130px 20px;
+		}
+		@include respond-to(1076px) {
+			padding: 4px 95px 20px;
+		}
+		@include respond-to(1010px) {
+			padding: 4px 40px 20px;
+			margin: 30px 0 0 0;
+		}
+		@include respond-to(767px) {
+			padding: 4px 30px 20px;
+			font-size: 38px;
+		}
+		@include respond-to(479px) {
+			padding: 4px 5px 20px;
+			line-height: 50px;
+		}
+		@include respond-to(404px) {
+			font-size: 32px;
+			line-height: 46px;
+
+		}
+		@include respond-to(340px) {
+			font-size: 28px;
+			line-height: 40px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content:space-between;
+
+		@include respond-to(1010px) {
+			flex-direction: column;
+		}
+		@include respond-to(767px) {
+			// padding: 4px 30px 20px;
+		}
+		@include respond-to(479px) {
+			// padding: 4px 5px 20px;
+		}
+	}
+	
+	&__advantages {
+		margin: 115px 0 0 5px;
+
+		@include respond-to(1010px) {
+			margin: 30px auto 0;
+		}
+		@include respond-to(767px) {
+			margin: 20px auto 0;
+		}
+		@include respond-to(479px) {
+			margin: 25px 5px 0 5px ;
+		}
+
+		&_items {
+			font-size: 22px;
+			font-family: 'DINpro-Medium';
+			line-height: 60px;
+			color: #fff;
+			position: relative;
+			display: flex;
+			align-items: center; 
+
+			@include respond-to(479px) {
+				line-height: 28px;
+				margin: 0 0 30px 0;
+				align-items: flex-start; 
+			}
+		}
+		&-icons {
+			display: inline-block;
+			margin: 0 8px 0 0;
+			flex-shrink: 0;
+
+			@include respond-to(479px) {
+				margin: 5px 8px 0 0;
+			}
+		}
+	}
+}
+
+.form_presentation {
+	width: 464px; 
+	height: 420px;
+	border:6px solid #d5aa19;
+	border-radius: 5px;
+	background: #fafafa;
+	box-sizing: border-box;
+	margin: 53px 0 0 0;
+	text-align: center;
+	box-shadow: 2px 0px 18px 6px rgba(0,0,0,.2);
+
+	@include respond-to(1010px) {
+		margin: 30px auto 0;
+	}
+	@include respond-to(767px) {
+		// padding: 4px 30px 20px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+	@include respond-to(340px) {
+		margin: 25px 0 0 0;
+	}
+	@include respond-to(336px) {
+		margin: 20px 0 0 0;
+	}
+
+	&__title {
+		font-size: 24px;
+		color: #000;
+		text-align: center;
+		font-weight: bold;
+		padding: 35px 35px 20px;
+
+		@include respond-to(479px) {
+			padding: 20px 20px 20px;
+		}
+		@include respond-to(431px) {
+			padding: 20px 5px 20px;
+		}
+	}
+
+	&__input {
+		width: 378px;
+		height: 48px;
+		font-size: 16px;
+		text-align: center;
+		box-sizing: border-box;
+		margin: 5px 35px 0;
+		border-radius: 4px;
+		line-height: 33px;
+		border: 1px solid #b5b5b5;
+
+		@include respond-to(459px) {
+			margin: 5px 0px 0;
+			width: 95%;
+		}
+
+		&:focus {
+			outline: 2px solid rgba(255,201,1,.5);
+		}
+	}
+	&__button {
+		width: 386px;
+		height: 60px;
+		font-size: 22px;
+		font-weight: bold;
+		text-shadow: 0px  1px #ea4f00;
+		text-align: center;
+		box-sizing: border-box;
+		margin: 13px 31px 10px;
+		border-radius: 6px;
+		color: #fff;
+		line-height: 33px;
+		outline: none;
+		cursor: pointer;
+		border-top: 4px solid #e9e9e9;
+		border-right: 4px solid #e9e9e9;
+		border-left: 4px solid #e9e9e9;
+		border-bottom: 4px solid #ea4f00;
+		background: linear-gradient(to top, #ff8e00, #ffc901);
+		
+		&:hover {
+			background: linear-gradient(to top, #da7900, #ffce19);
+		}
+
+		@include respond-to(459px) {
+			margin: 10px 0px 0;
+			width: 97%;
+		}
+	}
+
+	&__policies {
+		font-size: 12px;
+		line-height: 33px;
+		color: #414040;
+		font-family: 'DINpro-Medium';
+		color: #414040;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			margin: 0 10px 0 0;
+			@extend .svg-padlock;
+		}
+
+		@include respond-to(767px) {
+			font-size: 15px;
+		}
+		
+	}
+
+	&__promotion {
+		@include sprite($png-icon-bg-2);
+		width: 100%;
+		height: 96px;
+		border-top: 1px solid #909090;
+		margin: 15px 0 0;
+		display: flex;
+		align-items: center;
+
+		@include respond-to(479px) {
+			background: none;
+		}
+
+		&_text {
+			font-size: 22px;
+			color: #161616;
+			line-height: 30px; 
+			font-family: 'DINpro-Medium';
+			padding: 0px 50px 0;
+
+			@include respond-to(424px) {
+				padding: 0px 20px 0;
+			}
+			@include respond-to(365px) {
+				padding: 0px 5px 0;
+			}
+			@include respond-to(333px) {
+				font-size: 18px;
+			}
+		}
+		&_mod {
+			color: #ae0a0a;
+			font-size: 24px;
+			font-family: 'DINpro';
+			font-weight: bold;
+		}
+	}
+}
+
+
+// ***************
+// ***************
+.we_build {
+	width: 1170px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding: 70px 0 40px 0;
+
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&__title {
+		color: #0d0d0d;
+		font-size: 52px;
+		font-weight: bold; 
+		
+		@include respond-to(767px) {
+			font-size: 38px;
+		}
+		@include respond-to(479px) {
+			font-size: 32px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// margin: 40px 0 0 0;
+
+		@include respond-to(1187px) {
+			justify-content: space-around;
+		}
+	}
+	&__item {
+		width: 284px;
+		padding: 238px 0 0 0;
+		position: relative;
+		margin: 40px 0 0 0;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			cursor: pointer;
+		    box-shadow: 0 0 10px -1px rgba(0,0,0,.3);
+		}
+
+		&_size {
+			font-size: 18px;
+			color: #141414;
+			line-height: 20px;
+		}
+		&_price {
+			font-size: 18px;
+			line-height: 20px;
+			color: #141414;
+			font-weight: bold;
+		}
+		&_guarantee {
+			font-size: 18px;
+			line-height: 20px;
+			color: #141414;
+		}
+	}
+}
+
+.item_1 {
+	&:before{
+		@include sprite($png-icon-we-build-2);
+	}
+}
+.item_2 {
+	&:before{
+		@include sprite($png-icon-we-build-1);
+	}
+}
+.item_3 {
+	&:before{
+		@include sprite($png-icon-we-build-3);
+	}
+}
+.item_4 {
+	&:before{
+		@include sprite($png-icon-we-build-4);
+	}
+}
+
+
+
+
+
+
+
+// ***************************************************
+// ***************************************************
+// ***************************************************
+//  	CALCULATOR
+// ***************************************************
+// ***************************************************
+.calculator {
+	width: 1170px;
+	height: auto;
+	margin: 70px auto 50px;
+
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-size: 52px;
+		line-height: 54px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+
+		@include respond-to(1010px) {
+			font-size: 40px;
+		}
+		@include respond-to(767px) {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		@include respond-to(479px) {
+			font-size:32px;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		margin: 15px 0 0;
+
+		@include respond-to(767px) {
+			font-size: 22px;
+		}
+		@include respond-to(479px) {
+			font-size:21px;
+		}
+	}
+
+	&__help {
+		width: 100%;
+		padding: 0 10px 0;
+		box-sizing: border-box;
+	}
+}
+.help {
+
+	&__title {
+		font-size: 21px;
+		color: #0d0d0d;
+		font-family: 'DINpro-Medium';
+		margin: 54px 0 35px 0;
+
+		@include respond-to(479px) {
+			font-size:20px;
+		}
+	}
+
+	&__item {
+		font-size: 19px;
+		margin: 0 0 15px 0;
+
+		@include respond-to(479px) {
+			font-size:18px;
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			@extend .svg-ok;
+			margin: 0 10px 0 2px;
+		}
+	}
+}
+
+
+// ***************************************************
+// ***************************************************
+// ***************************************************
+.calculator_inner {
+	width: 100%;
+	display: flex;
+	justify-content:space-around;
+	margin: 40px 0 0 0;
+
+	@include respond-to(1187px) {
+		justify-content:space-between;
+	}
+	@include respond-to(1076px) {
+		
+	}
+	@include respond-to(1010px) {
+		flex-direction: column;
+		justify-content:space-around;
+	}
+	@include respond-to(767px) {
+		// width: 470px;
+	}
+	@include respond-to(479px) {
+		// width: 100%;
+		// flex-direction: column;
+	}
+}
+.calc_form {
+	width: 573px;
+	height: auto;
+	border:6px solid #daaf1e;
+	border-radius: 4px;
+	box-sizing:border-box;
+
+	@include respond-to(1010px) {
+		margin: 0 auto;
+	}
+	@include respond-to(767px) {
+		border:1px solid #daaf1e;
+		width: 100%;
+	}
+	@include respond-to(479px) {
+		// width: 100%;
+		// flex-direction: column;
+	}
+}
+
+.s_home {
+	margin: 10px 0 0 0;
+
+	&__text {
+		display: flex;
+		justify-content:space-between;
+		padding: 34px 23px 6px;
+
+		@include respond-to(767px) {
+			padding: 15px 0px 6px;
+			width: 95%;
+			margin: 0 auto;
+		}
+		@include respond-to(479px) {
+		}
+
+		&_name {
+			font-size: 16px;
+			color: #0d0d0d;
+		}
+		
+		&_val {
+			font-size: 18px;
+			color: #0d0d0d;
+			font-family: 'DINpro-Medium';
+		}
+	}
+
+	&__possible {
+		display: flex;
+		justify-content:space-between;
+		margin: 10px 20px 0px;
+
+		@include respond-to(767px) {
+			padding: 10px 0px 0px;
+			width: 95%;
+			margin: 0 auto;
+		}
+		@include respond-to(479px) {
+		}
+
+		&_min {
+			font-size: 13px;
+			color: #747474;
+		}
+		&_max {
+			font-size: 13px;
+			color: #747474;
+		}
+		&_middle {
+			font-size: 13px;
+			color: #747474;
+			position: relative;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				width: 1px;
+				height: 10px;
+				background: #c9c9c9;
+				top: -10px;
+				left: 50%
+			}
+
+			&-1 {
+				margin: 0 10px 0 0;
+
+				@include respond-to(1187px) {
+					margin: 0 9px 0 0;
+				}
+				@include respond-to(1076px) {
+					margin: 0 8px 0 0;
+				}
+				@include respond-to(1010px) {
+					margin: 0 8px 0 0;
+				}
+				@include respond-to(767px) {
+					margin: 0 9px 0 0;
+				}
+				@include respond-to(479px) {
+					margin: 0 8px 0 0;
+				}
+			}
+			&-2 {
+				margin: 0 0px 0 10px;
+
+				@include respond-to(1187px) {
+					margin: 0 0 0 9px;
+				}
+				@include respond-to(1076px) {
+					margin: 0 0 0 8px;
+				}
+				@include respond-to(1010px) {
+					margin: 0 0 0 8px;
+				}
+				@include respond-to(767px) {
+					margin: 0 0 0 9px;
+				}
+				@include respond-to(479px) {
+					margin: 0 0 0 8px;
+				}
+			}
+		}
+	}
+
+	&__slider {
+		width: 515px;
+		margin: 0 auto;
+		height: 3px;
+		border-radius: 3px;
+		border:1px solid #cbcbcb; 
+		background: #e8e8e8;
+		position: relative;
+
+		@include respond-to(767px) {
+			width: 93%;
+		}
+		@include respond-to(479px) {
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 1px;
+			height: 10px;
+			background: #c9c9c9;
+			bottom: -10px;
+			left: -1px;
+		}
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 1px;
+			height: 10px;
+			background: #c9c9c9;
+			bottom: -10px;
+			right: -1px;
+		}
+
+		&_highlight {
+			display: inline-block;
+			position: absolute;
+			height: 3px;
+			width: 33%;
+			top: 0px;
+			border-radius: 3px;
+			box-shadow: 0px 0px 0px 4px rgba(0,0,0,.1);
+			left: 0px;
+			background: linear-gradient(to top, #ff9700, #ffc101);
+			transition: width .1s ease-in-out;
+		}
+	}
+}
+
+.s_early {
+	margin: 10px 0 0 0;
+
+	&__text {
+		display: flex;
+		justify-content:space-between;
+		padding: 34px 23px 6px;
+
+		@include respond-to(767px) {
+			padding: 15px 0px 6px;
+			width: 95%;
+			margin: 0 auto;
+		}
+		@include respond-to(479px) {
+		}
+
+
+		&_name {
+			font-size: 16px;
+			color: #0d0d0d;
+		}
+		
+		&_val {
+			font-size: 18px;
+			color: #0d0d0d;
+			font-family: 'DINpro-Medium';
+		}
+	}
+
+	&__possible {
+		display: flex;
+		justify-content:space-between;
+		padding: 10px 20px 0px;
+
+		@include respond-to(767px) {
+			padding: 10px 0px 0px;
+			width: 95%;
+			margin: 0 auto;
+		}
+		@include respond-to(479px) {
+		}
+
+		&_min {
+			font-size: 13px;
+			color: #747474;
+		}
+		&_max {
+			font-size: 13px;
+			color: #747474;
+		}
+		&_middle {
+			font-size: 13px;
+			color: #747474;
+			position: relative;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				width: 1px;
+				height: 10px;
+				background: #c9c9c9;
+				top: -10px;
+				left: 50%
+			}
+		}
+	}
+
+	&__slider {
+		width: 515px;
+		margin: 0 auto;
+		height: 3px;
+		border-radius: 3px;
+		border:1px solid #cbcbcb; 
+		background: #e8e8e8;
+		position: relative;
+
+		@include respond-to(767px) {
+			width: 93%;
+		}
+		@include respond-to(479px) {
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 1px;
+			height: 10px;
+			background: #c9c9c9;
+			bottom: -10px;
+			left: -1px;
+		}
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 1px;
+			height: 10px;
+			background: #c9c9c9;
+			bottom: -10px;
+			right: -1px;
+		}
+
+		&_highlight {
+			display: inline-block;
+			position: absolute;
+			height: 3px;
+			width: 50%;
+			top: 0px;
+			border-radius: 3px;
+			box-shadow: 0px 0px 0px 4px rgba(0,0,0,.1);
+			left: 0px;
+			background: linear-gradient(to top, #ff9700, #ffc101);
+			transition: width .1s ease-in-out;
+		}
+	}
+}
+
+.ui-slider-handle.ui-state-default.ui-corner-all {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #ddd;
+	box-shadow: 0px 0px 1px 1px rgba(0,0,0,.2);
+	outline: none;
+	cursor: pointer;
+    top: -7px;
+    margin-left: -8.5px;
+	border-radius: 15px;
+	background: linear-gradient(to top, #ff8e00,#ffc901);
+
+
+}
+.ui-slider-handle.ui-state-default.ui-corner-all.ui-state-hover{
+	background: linear-gradient(to top, #ff8e00,#ffd848);
+}
+.ui-slider-handle.ui-state-default.ui-corner-all.ui-state-hover.ui-state-active {
+	background: linear-gradient(to top, #df7c00,#ffd848);
+}
+
+
+.kit {
+	margin: 43px 23px 0;
+
+	@include respond-to(767px) {
+		margin: 30px auto 0;
+		width: 95%;
+	}
+	@include respond-to(479px) {
+	}
+
+	&__title {
+		font-size: 16px;
+		color: #0d0d0d;
+
+		@include respond-to(767px) {
+			font-size: 18px;
+		}
+		@include respond-to(479px) {
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 3px 0px 0 0;
+
+		&_label {
+			font-size: 18px;
+			color: #0d0d0d;
+			font-family: 'DINpro-Medium';
+			margin: 10px 20px 0 0;
+
+			@include respond-to(767px) {
+				// margin: 10px 15px 0 0;
+			}
+			@include respond-to(479px) {
+				margin: 10px 25px 5px 0px;
+			}
+
+			&:last-child {
+				margin: 10px 0px 0 0;
+
+				@include respond-to(479px) {
+					margin: 10px 21px 5px 0px;
+				}
+			}
+		}
+
+		&_span {
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			border-radius: 15px;
+			border:1px solid #969696;
+			position: relative;
+			top: 2px;
+			left: -13px;
+			z-index: 10;
+			background: #fff;
+
+			@include respond-to(767px) {
+				width: 13px;
+				height: 13px;
+				top: 3px;
+				left: -15px;
+			}
+		}
+
+		&_radio {
+			margin: 0 0 0 0;
+			vertical-align: middle;
+			visibility: visible;/* hidden */
+			position: relative;
+			z-index: 9;
+			outline: none;
+			border: none;
+
+			&:checked + .kit__items_span {
+				display: inline-block;
+				width: 11px;
+				height: 11px;
+				border-radius: 15px;
+				border:1px solid #e1e1e1;
+				box-shadow: 0px 0px 2px 0px #e1e1e1;
+				position: relative;
+				top: 2px;
+				right: -13px;
+				z-index: 10;
+				background: #fff;
+
+				@include respond-to(767px) {
+					width: 13px;
+					height: 13px;
+					top: 3px;
+					left: -15px;
+				}
+
+				&:after {
+					content: '';
+					display: inline-block;
+					width: 9px;
+					height: 9px;
+					border-radius: 15px;
+					position: absolute;
+					top: 1px;
+					right: 1px;
+					z-index: 11;
+					background: linear-gradient(to top, #ff9106,#ffca07);
+
+					@include respond-to(767px) {
+						width: 11px;
+						height: 11px;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+.optional {
+	margin: 43px 23px 30px;
+
+	&__title {
+		font-size: 16px;
+		color: #0d0d0d;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 13px 0 0 0;
+
+		&_label {
+			font-size: 18px;
+			color: #0d0d0d;
+			font-family: 'DINpro-Medium';
+			width: 160px;
+			margin: 0 40px 22px 0;
+
+			@include respond-to(767px) {
+				width: 165px;
+			}
+			@include respond-to(479px) {
+			}
+		}
+
+		&_span {
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			border-radius: 15px;
+			border:1px solid #969696;
+			position: relative;
+			top: 2px;
+			left: -13px;
+			z-index: 10;
+			background: #fff;
+
+			@include respond-to(767px) {
+				width: 13px;
+				height: 13px;
+				top: 3px;
+				left: -15px;
+			}
+		}
+
+		&_radio {
+			margin: 0 0 0 0;
+			vertical-align: middle;
+			visibility: visible;/* hidden */
+			position: relative;
+			z-index: 9;
+			outline: none;
+
+			&:checked + .optional__items_span {
+				display: inline-block;
+				width: 11px;
+				height: 11px;
+				border-radius: 15px;
+				border:1px solid #e1e1e1;
+				box-shadow: 0px 0px 2px 0px #e1e1e1;
+				position: relative;
+				top: 2px;
+				right: -13px;
+				z-index: 10;
+				background: #fff;
+
+				@include respond-to(767px) {
+					width: 13px;
+					height: 13px;
+					top: 3px;
+					left: -15px;
+				}
+
+				&:after {
+					content: '';
+					display: inline-block;
+					width: 9px;
+					height: 9px;
+					border-radius: 15px;
+					position: absolute;
+					top: 1px;
+					right: 1px;
+					z-index: 11;
+					background: linear-gradient(to top, #ff9106,#ffca07);
+
+					@include respond-to(767px) {
+						width: 11px;
+						height: 11px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// ***************************************************
+// ***************************************************
+.culc_result {
+	width: 520px;
+	height: auto;
+	text-align: center;
+
+	@include respond-to(1187px) {
+		width: 460px;
+	}
+	@include respond-to(1076px) {
+		width: 400px;
+	}
+	@include respond-to(1010px) {
+		width: 450px;
+		margin: 30px auto 0;
+	}
+	@include respond-to(767px) {
+		// width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 99%;
+		margin: 20px auto 0;
+	}
+
+	&__img {
+		width: 100%;
+		border:3px solid #fff;
+		box-sizing: border-box;
+		box-shadow: 0px 2px 18px 2px rgba(0,0,0,.2);
+	}
+
+	&__text {
+		font-size: 18px;
+		font-family: 'DINpro-Medium';
+		margin: 9px 0 12px;
+
+		@include respond-to(379px) {
+			margin: 9px 50px 12px;
+		}
+		@include respond-to(336px) {
+			margin: 9px 29px 12px;
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			@extend .svg-calc;
+			vertical-align: middle;
+			margin: 0 12px 3px 0;
+		}
+	}
+	&__res {
+		font-size: 28px;
+		font-weight: bold;
+		font-family: 'DINpro';
+
+		@include respond-to(479px) {
+			font-size: 24px;	
+		}
+	}
+
+	&__button {
+		width: 307px;
+		height: 48px;
+		font-size: 19px;
+		font-family: 'DINpro-Medium';
+		text-shadow: 0px  1px #ea4f00;
+		text-align: center;
+		box-sizing: border-box;
+		border-radius: 6px;
+		color: #fff;
+		line-height: 33px;
+		outline: none;
+		cursor: pointer;
+		// margin: 20px 0 0 0;
+		border-top: 4px solid #e9e9e9;
+		border-right: 4px solid #e9e9e9;
+		border-left: 4px solid #e9e9e9;
+		border-bottom: 4px solid #ea4f00;
+		background: linear-gradient(to top, #ff8e00, #ffc901);
+
+		&:hover {
+			background: linear-gradient(to top, #da7900, #ffce19);
+		}
+		
+		@include respond-to(1076px) {
+			margin: 15px 0 0;
+		}
+		@include respond-to(1010px) {
+			margin: 0px 0 0;
+		}
+		@include respond-to(420px) {
+			width: 90%; 
+		}
+	}
+}
+// ***************************************************
+// 		END CALCULATOR
+// ***************************************************
+
+
+.new_gorniy	{
+	width: 100%;
+	height: auto;
+	background: url(../img/bg-4.png);
+	background-size: cover;
+	padding: 40px 0;
+
+	&__title {
+		font-size: 52px;
+		line-height: 54px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+
+		@include respond-to(1010px) {
+			font-size: 40px;
+		}
+		@include respond-to(767px) {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		@include respond-to(479px) {
+			font-size:32px;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		margin: 15px 0 0;
+		margin: 20px 0 0 0;
+
+		@include respond-to(767px) {
+			font-size: 22px;
+		}
+		@include respond-to(479px) {
+			font-size:21px;
+		}
+	}
+
+	&__items {
+		margin: 40px auto 0;
+		width: 1170px;
+		display: flex;
+		flex-wrap:wrap;
+		flex-direction:row;
+		justify-content: space-around;
+
+		@include respond-to(1187px) {
+			width: 1060px;
+		}
+		@include respond-to(1076px) {
+			width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 750px;
+		}
+		@include respond-to(767px) {
+			width: 470px;
+		}
+		@include respond-to(479px) {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		display: flex;
+		width: 201px;
+		height: 165px;
+		text-align: center;
+		color: #0d0d0d;
+		font-size: 16px;
+		line-height: 19px;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+		margin: 0 20px;
+
+		@include respond-to(767px) {
+			height: auto;
+		}
+
+		&_text {
+			display: block;
+			height: 115px;
+
+			@include respond-to(767px) {
+				height: auto;
+				padding: 0 0 35px;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				width: 47px;
+				height: 1px;
+				margin: 8px auto;
+				background: #159c2a;
+			}
+		}
+
+		&-mod {
+			color: #159c2a;
+			font-family: 'DINpro-Medium';
+		}
+	}
+}
+
+.svg-water,
+.svg-water,
+.svg-plug,
+.svg-cat-area,
+.svg-lamp,
+.svg-wifi,
+.svg-style,
+.svg-sidewalks,
+.svg-road,
+.svg-stop,
+.svg-fence {
+	// position: absolute;
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+.location {
+	width: 1170px;
+	margin: 0 auto;
+	height: auto;
+	padding: 40px 0;
+
+	
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 52px;
+		line-height: 54px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		padding: 0 5px 0;
+
+		@include respond-to(1010px) {
+			font-size: 40px;
+		}
+		@include respond-to(767px) {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		@include respond-to(479px) {
+			font-size:32px;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		margin: 15px 0 0;
+		margin: 20px 0 0 0;
+		padding: 0 5px 0;
+
+		@include respond-to(767px) {
+			font-size: 22px;
+		}
+		@include respond-to(479px) {
+			font-size:21px;
+		}
+	}
+
+	&__img_map {
+		width: 100%;
+		height: 526px;
+		background: url(../img/bg-5.png);
+		background-size: cover;
+		background-position: center center; 
+		border: 3px solid #fff;
+		box-sizing: border-box;
+		margin: 40px 0 0 0;
+		box-shadow: 0px 0px 30px 0px rgba(0,0,0,.3);
+
+		@include respond-to(1187px) {
+			height: 477px;
+		}
+		@include respond-to(1075px) {
+			height: 446px;
+		}
+		@include respond-to(1010px) {
+			height: 337px;
+		}
+	}
+}
+
+
+
+
+.infrastructure {
+	width: 1170px;
+	margin: 0 auto;
+	height: auto;
+	padding: 40px 0;
+	text-align: center;
+
+	
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 42px;
+		line-height: 46px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		padding: 0 5px 0;
+
+		@include respond-to(1010px) {
+			font-size: 38px;
+			line-height: 42px;
+		}
+		@include respond-to(767px) {
+			font-size: 30px;
+			line-height: 32px;
+		}
+		@include respond-to(479px) {
+			font-size:22px;
+			line-height: 24px;
+		}
+	}
+
+	&__list {
+		margin: 75px auto 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		width: 890px;
+
+		@include respond-to(1010px) {
+			width: 750px;
+		}
+		@include respond-to(767px) {
+			width: 470px;
+		}
+		@include respond-to(479px) {
+			width: 100%;
+		}
+		
+
+		&_text {
+			width: 220px;
+		}
+
+		&_item {
+			text-align: left;
+			font-size: 19px;
+			font-family: 'DINpro-Medium';
+			color: #0d0d0d;
+			display: flex;
+    		width: 287px;
+    		margin: 0 15px 40px 15px;
+    		align-items:center;
+    		justify-content: space-around;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				flex-shrink: 0;
+			}
+			&-1:before {
+				@include sprite($png-icon-chrrmcoed-location);
+			}
+			&-2:before {
+				@include sprite($png-icon-pesochnica-kolizey);
+			}
+			&-3:before {
+				@include sprite($png-icon-stopping);
+			}
+			&-4:before {
+				@include sprite($png-icon-school);
+			}
+			&-5:before {
+				@include sprite($png-icon-pharmacy);
+			}
+			&-6:before {
+				@include sprite($png-icon-hospital);
+			}
+			&-7:before {
+				@include sprite($png-icon-basket);
+			}
+			&-8:before {
+				@include sprite($png-icon-market);
+			}
+		}
+	}
+
+	&__text {
+		font-size: 19px;
+		color: #0d0d0d;
+		margin: 10px 0 45px;
+	}
+
+	&__button {
+		width: 315px;
+		height: 48px;
+		font-size: 19px;
+		font-family: 'DINpro-Medium';
+		text-shadow: 0px  1px #ea4f00;
+		text-align: center;
+		box-sizing: border-box;
+		border-radius: 6px;
+		color: #fff;
+		line-height: 33px;
+		outline: none;
+		cursor: pointer;
+		border-top: 4px solid #e9e9e9;
+		border-right: 4px solid #e9e9e9;
+		border-left: 4px solid #e9e9e9;
+		border-bottom: 4px solid #ea4f00;
+		background: linear-gradient(to top, #ff8e00, #ffc901);
+
+		&:hover {
+			background: linear-gradient(to top, #da7900, #ffce19);
+		}
+		
+		@include respond-to(1076px) {
+			margin: 15px 0 0;
+		}
+		@include respond-to(1010px) {
+			margin: 0px 0 0;
+		}
+		@include respond-to(420px) {
+			width: 90%; 
+		}
+	}
+}
+
+
+
+
+
+.who_work {
+	width: 1170px;
+	margin: 0 auto;
+	height: auto;
+	padding: 40px 0;
+
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 52px;
+		line-height: 54px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		padding: 0 5px 0;
+
+		@include respond-to(1010px) {
+			font-size: 40px;
+		}
+		@include respond-to(767px) {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		@include respond-to(479px) {
+			font-size:32px;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		margin: 15px 0 0;
+		margin: 20px 0 0 0;
+		padding: 0 5px 0;
+
+		@include respond-to(767px) {
+			font-size: 22px;
+		}
+		@include respond-to(479px) {
+			font-size:21px;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		height: auto;
+		margin: 60px 0 0 0;
+		display: flex;
+		justify-content: space-between;
+
+		@include respond-to(1187px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		@include respond-to(1076px) {
+			width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 750px;
+		}
+		@include respond-to(767px) {
+			width: 470px;
+		}
+		@include respond-to(479px) {
+			width: 100%;
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			flex-shrink: 0;
+			@include sprite($png-icon-new-home-logo);
+			margin: 10px 0 0 5px;
+
+			@include respond-to(1187px) {
+				margin: 0px 0 30px 0px;
+			}
+		}
+
+	}
+
+	&__list {
+		width: 875px;
+
+		@include respond-to(1187px) {
+			// width: 90%
+		}
+		@include respond-to(1076px) {
+			// width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 700px;
+		}
+		@include respond-to(767px) {
+			width: 430px;
+		}
+		@include respond-to(479px) {
+			width: 85%;
+		}
+
+		&_item {
+			font-size: 19px;
+			margin: 0 0 15px 0;
+			position: relative;
+			padding: 0 5px 0;
+			line-height: 24px;
+
+			@include respond-to(479px) {
+				font-size: 17px;
+			}
+
+			@include respond-to(479px) {
+				font-size:18px;
+			}
+
+			&:before {
+				content: '';
+				display: inline-block;
+				@extend .svg-ok;
+				margin: 0 10px 0 2px;
+				position: absolute;
+				top: 4px; 
+				left: -19px;
+			}
+		}
+	}
+}
+
+
+
+
+.payment {
+	width: 1170px;
+	margin: 0 auto;
+	height: auto;
+	padding: 60px 0 40px;
+
+	@include respond-to(1187px) {
+		width: 1060px;
+	}
+	@include respond-to(1076px) {
+		width: 992px;
+	}
+	@include respond-to(1010px) {
+		width: 750px;
+	}
+	@include respond-to(767px) {
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 56px;
+		line-height: 53px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+		padding: 0 5px 0;
+
+		@include respond-to(1010px) {
+			font-size: 40px;
+		}
+		@include respond-to(767px) {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		@include respond-to(479px) {
+			font-size:32px;
+		}
+	}
+
+	&__text {
+		font-size: 25px;
+		color: #0d0d0d;
+		text-align: center;
+		// font-weight: bold;
+		margin: 20px 0 0 0;
+		padding: 0 5px 0;
+
+		@include respond-to(767px) {
+			font-size: 22px;
+		}
+		@include respond-to(479px) {
+			font-size:21px;
+		}
+	}
+
+	&__tabs {
+		width: 100%;
+		margin: 50px auto;
+	}
+}
+
+.tabs {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+
+	&_navigation {
+		display: flex;
+		width: 1170px;
+
+		@include respond-to(1187px) {
+			width: 1060px;
+		}
+		@include respond-to(1076px) {
+			width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 750px;
+		}
+		@include respond-to(767px) {
+			width: 527px;
+		}
+		@include respond-to(479px) {
+			// width: 100%;
+		}
+		
+		&__item {
+
+			&:first-child {
+
+				.tabs_navigation__link {
+					margin: 0px 0 0px 0px;
+				}
+			}
+			// &:nth-child(3) {
+
+			// 	.tabs_navigation__link {
+					
+			// 		@include respond-to(767px) {
+			// 			padding: 0 0px;
+			// 		}
+			// 	}
+			// }
+		}
+
+		&__link {
+			color: #000;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			padding: 0 46px;
+			font-size: 19px;
+			height: 62px;
+			margin: 0px 0 0 -3px ;
+			border: 3px solid #daaf1e;
+
+			@include respond-to(1187px) {
+				padding: 0 37px;
+			}
+			@include respond-to(1076px) {
+				padding: 0 30px;
+			}
+			@include respond-to(1010px) {
+				padding: 0 16px;
+				font-size: 16px;
+			}
+			@include respond-to(767px) {
+				padding: 0 6px;
+			}
+
+			&:hover {
+				background: #ffd548;
+				color: #fff;
+			}
+
+			&-active {
+				background: #daaf1e;
+				color: #fff;
+
+				&:hover {
+					background: #daaf1e;
+				}
+			}
+		}
+	}
+
+	&_content {
+		width: 100%;
+		height: 415px;
+		margin: -3px 0 0 0;
+		border: 3px solid #daaf1e;
+		box-sizing: border-box;
+		padding: 65px 0 0;
+
+		@include respond-to(767px) {
+			height: auto;
+		}
+
+		&__item {
+			display: none;
+
+			&-active {
+				display: flex;
+			}
+
+			&_button {
+				width: 185px;
+				height: 40px;
+				font-size: 16px;
+				font-family: 'DINpro-Medium';
+				text-shadow: 0px  1px #ea4f00;
+				text-align: center;
+				box-sizing: border-box;
+				border-radius: 6px;
+				color: #fff;
+				line-height: 33px;
+				outline: none;
+				cursor: pointer;
+				margin: 22px 0 0 120px;
+				border-top: 2px solid #e9e9e9;
+				border-right: 2px solid #e9e9e9;
+				border-left: 2px solid #e9e9e9;
+				border-bottom: 2px solid #ea4f00;
+				background: linear-gradient(to top, #ff8e00, #ffc901);
+
+				&:hover {
+					background: linear-gradient(to top, #da7900, #ffce19);
+				}
+				
+				@include respond-to(1076px) {
+					// margin: 15px 0 0;
+				}
+				@include respond-to(1010px) {
+					// margin: 0px 0 0;
+				}
+				@include respond-to(767px) {
+					display: block;
+					margin: 22px auto 0px;
+				}
+				@include respond-to(420px) {
+					// width: 90%; 
+				}
+			}
+		}
+
+	}
+}
+
+
+
+.sberbank {
+	justify-content: space-around;
+
+	@include respond-to(767px) {
+		flex-direction: column;
+	}
+	@include respond-to(479px) {
+		// width: 100%;
+	}
+
+	&__inner {
+		width: 701px;
+		height: auto;
+
+		@include respond-to(1076px) {
+			margin: 0px 7px 0;
+		}
+		@include respond-to(1010px) {
+			// margin: 0px 0 0;
+		}
+		@include respond-to(767px) {
+			width: 99%;
+		}
+		@include respond-to(420px) {
+			// width: 90%; 
+		}
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		// margin: 20px auto 0;
+		@include sprite($png-icon-sber);
+
+		@include respond-to(767px) {
+			margin: 20px auto 0;
+		}
+	}
+
+	&__text {
+		font-size: 19px; 
+		line-height: 24px;
+		color: #000;
+	}
+
+	&__list {
+		margin: 30px 0 28px 0;
+	}
+	
+	&__item {
+		font-size: 19px;
+		line-height: 19px;
+		margin: 0 0 13px 0;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background: #000;
+			border-radius: 10px;
+			margin: 0 7px 3px 16px;
+
+			@include respond-to(1010px) {
+				margin: 0px 7px 3px 6px;
+			}
+		}
+	}
+}
+
+
+.installment {
+	justify-content: space-around;
+
+	@include respond-to(767px) {
+		flex-direction: column;
+	}
+
+	&__inner {
+		width: 701px;
+		height: auto;
+
+		@include respond-to(1076px) {
+			margin: 0px 7px 0;
+		}
+		@include respond-to(1010px) {
+			// margin: 0px 0 0;
+		}
+		@include respond-to(767px) {
+			width: 99%;
+		}
+		@include respond-to(420px) {
+			// width: 90%; 
+		}
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		@include sprite($png-icon-payment-step2);
+
+		@include respond-to(767px) {
+			margin: 20px auto 0;
+		}
+	}
+
+	&__text {
+		font-size: 19px; 
+		line-height: 24px;
+		color: #000;
+	}
+
+	&__list {
+		margin: 30px 0 28px 0;
+	}
+	
+	&__item {
+		font-size: 19px;
+		line-height: 19px;
+		margin: 0 0 13px 0;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background: #000;
+			border-radius: 10px;
+			margin: 0 7px 3px 16px;
+
+			@include respond-to(1010px) {
+				margin: 0px 7px 3px 6px;
+			}
+		}
+	}
+}	
+
+
+.sale {
+	@extend .installment;
+
+	&__inner {
+		width: 701px;
+		height: auto;
+
+		@include respond-to(1076px) {
+			margin: 0px 7px 0;
+		}
+		@include respond-to(1010px) {
+			// margin: 0px 0 0;
+		}
+		@include respond-to(767px) {
+			width: 99%;
+		}
+		@include respond-to(420px) {
+			// width: 90%; 
+		}
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		@include sprite($png-icon-through-sale);
+
+		@include respond-to(767px) {
+			margin: 20px auto 0;
+		}
+	}
+
+	&__text {
+		font-size: 19px; 
+		line-height: 24px;
+		color: #000;
+	}
+
+	&__list {
+		margin: 30px 0 28px 0;
+	}
+	
+	&__item {
+		font-size: 19px;
+		line-height: 19px;
+		margin: 0 0 13px 0;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background: #000;
+			border-radius: 10px;
+			margin: 0 7px 3px 16px;
+
+			@include respond-to(1010px) {
+				margin: 0px 7px 3px 6px;
+			}
+		}
+	}
+}
+
+
+.maternity {
+	@extend .installment;
+
+	&__inner {
+		width: 701px;
+		height: auto;
+
+		@include respond-to(1076px) {
+			margin: 0px 7px 0;
+		}
+		@include respond-to(1010px) {
+			// margin: 0px 0 0;
+		}
+		@include respond-to(767px) {
+			width: 99%;
+		}
+		@include respond-to(420px) {
+			// width: 90%; 
+		}
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		@include sprite($png-icon-maternity);
+
+		@include respond-to(767px) {
+			margin: 20px auto 0;
+		}
+	}
+
+	&__text {
+		font-size: 19px; 
+		line-height: 24px;
+		color: #000;
+	}
+
+	&__list {
+		margin: 30px 0 28px 0;
+	}
+	
+	&__item {
+		font-size: 19px;
+		line-height: 19px;
+		margin: 0 0 13px 0;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background: #000;
+			border-radius: 10px;
+			margin: 0 7px 3px 16px;
+
+			@include respond-to(1010px) {
+				margin: 0px 7px 3px 6px;
+			}
+		}
+	}
+}
+
+.certificates {
+	@extend .installment;
+
+	&__inner {
+		width: 701px;
+		height: auto;
+
+		@include respond-to(1076px) {
+			margin: 0px 7px 0;
+		}
+		@include respond-to(1010px) {
+			// margin: 0px 0 0;
+		}
+		@include respond-to(767px) {
+			width: 99%;
+		}
+		@include respond-to(420px) {
+			// width: 90%; 
+		}
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		@include sprite($png-icon-certificates);
+
+		@include respond-to(767px) {
+			margin: 20px auto 0;
+		}
+	}
+
+	&__text {
+		font-size: 19px; 
+		line-height: 24px;
+		color: #000;
+		margin: 9px 0;
+	}
+
+	&__list {
+		margin: 30px 0 28px 0;
+	}
+	
+	&__item {
+		font-size: 19px;
+		line-height: 19px;
+		margin: 0 0 13px 0;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background: #000;
+			border-radius: 10px;
+			margin: 0 7px 3px 16px;
+
+			@include respond-to(1010px) {
+				margin: 0px 7px 3px 6px;
+			}
+		}
+	}
+}
+
+.maps {
+	height: auto;
+	padding: 40px 0 0 0;
+	text-align: center;
+	position: relative;
+
+	&__title {
+		font-size: 52px;
+		line-height: 54px;
+		color: #0d0d0d;
+		text-align: center;
+		font-weight: bold;
+
+		@include respond-to(1010px) {
+			font-size: 40px;
+		}
+		@include respond-to(767px) {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		@include respond-to(479px) {
+			font-size:32px;
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 517px;
+		margin: 50px 0 0 0;
+
+	}
+
+	&__tooltip {
+		position: absolute;
+		width: 461px;
+		height: 247px;
+		background: #fff;
+		top: 290px;
+		text-align: left;
+		padding: 40px 30px;
+		box-sizing: border-box;
+		right: 15%;
+		box-shadow: 0px 0px 7px 0px rgba(0,0,0,.5);
+
+		@include respond-to(1240px) {
+			right: 14%;
+		}
+		@include respond-to(1190px) {
+			right: 10%;
+		}
+		@include respond-to(1076px) {
+			right: 5%;
+		}
+		@include respond-to(1010px) {
+			display: none;
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 111px;
+			left: -52px;
+			width: 0px;
+			height: 0px;
+			border-bottom: 15px solid transparent;
+			border-right: 25px solid #fff;
+			border-left: 30px solid transparent;
+			border-top: 20px solid #fff; 
+		}
+	}
+
+	&__adress {
+		font-size: 24px;;
+		line-height: 28px;
+		font-weight: bold;
+		color: #3a3124;
+
+		&-mod {
+			color: #000;
+			line-height: 50px;
+		}
+	}
+
+	&_contact {
+
+		&__adress {
+			font-size: 19px;
+			color: #000;
+			margin: 15px 0 16px 0;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				margin: 0 7px 0 2px;;
+				@extend .svg-adress-pointer;
+			}
+		}
+
+		&__phone {
+			font-size: 19px;
+			color: #000;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				margin: 0 5px 0 0;
+				@extend .svg-phone ;
+			}
+		}
+
+	}
+
+}
+
+
+
+
+
+
+// ***************************************************
+// ***************************************************
+// ***************************************************
+.footer {
+	width: 100%;
+	height: 890px;
+	background: url(../img/bg-footer.png);
+	background-size: cover;
+	overflow: hidden;
+	
+	@include respond-to(1010px) {
+		// width: 750px;
+		height: auto;
+	}
+
+	&__form {
+		width: 1170px; 
+		height: 628px;
+		border:6px solid #d3a819;
+		border-radius: 5px;
+		background: #f9f8f8;
+		box-sizing: border-box;
+		margin: -7px auto 0 ;
+		text-align: center;
+		box-shadow: 2px 0px 18px 6px rgba(0,0,0,.2);
+
+		@include respond-to(1187px) {
+			width: 1060px;
+		}
+		@include respond-to(1076px) {
+			width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 750px;
+			height: 580px;
+		}
+		@include respond-to(767px) {
+			width: 470px;
+			height: 520px;
+		}
+		@include respond-to(479px) {
+			width: 100%;
+		}
+
+		&_title {
+			font-size: 56px;
+			font-weight: bold;
+			line-height: 56px;
+			margin: 58px 0 20px;
+
+			@include respond-to(1010px) {
+				margin: 30px 0 20px;
+			}
+			@include respond-to(767px) {
+				font-size: 36px;
+				margin: 20px 0 10px;
+			}
+			@include respond-to(479px) {
+				font-size: 30px;
+				margin: 10px 0 10px;
+				line-height: 38px;
+			}
+		}
+		&_text {
+			font-size: 19px;
+			line-height: 28px;
+			font-family: 'DINpro-Medium';
+
+			@include respond-to(767px) {
+				// font-size: 36px;
+				// margin: 20px 0 10px;
+			}
+			@include respond-to(479px) {
+				// font-size: 30px;
+				// margin: 10px 0 10px;
+				// line-height: 38px;
+			}
+		}
+		&_textarea {
+			width: 478px;
+			height: 179px;
+			border-radius: 3px;
+			border:1px solid #888888;
+			margin: 30px 300px 23px;
+			font-size: 18px;
+			padding: 10px;
+			box-sizing: border-box;
+			background: #fff;
+			resize: none; 
+
+			@include respond-to(1187px) {
+				margin: 30px 200px 23px;
+			}
+			@include respond-to(1076px) {
+				margin: 30px 150px 23px;
+			}
+			@include respond-to(1010px) {
+				margin: 30px 100px 23px;
+			}
+			@include respond-to(767px) {
+				margin: 20px 0px 10px;
+				width: 95%;
+			}
+			@include respond-to(479px) {
+				width: 95%;
+			}
+			@include respond-to(346px) {
+				height: 160px;
+			}
+
+			&:focus {
+				outline: 2px solid rgba(255,201,1,.5);
+			}
+		}
+		&_number {
+			width: 478px;
+			height: 55px;
+			border:1px solid #888888;
+			border-radius: 3px;
+			font-size: 18px;
+			background: #fff;
+			box-sizing: border-box;
+			padding: 0 10px 0;
+
+			@include respond-to(767px) {
+				width: 95%;
+			}
+
+			&:focus {
+				outline: 2px solid rgba(255,201,1,.5);
+			}
+		}
+		&_button {
+			width: 386px;
+			height: 60px;
+			font-size: 19px;
+			font-family: 'DINpro-Medium';
+			text-shadow: 0px  1px #ea4f00;
+			text-align: center;
+			box-sizing: border-box;
+			margin: 34px 200px 10px;
+			border-radius: 6px;
+			color: #fff;
+			line-height: 33px;
+			outline: none;
+			cursor: pointer;
+			border-top: 4px solid #e9e9e9;
+			border-right: 4px solid #e9e9e9;
+			border-left: 4px solid #e9e9e9;
+			border-bottom: 4px solid #ea4f00;
+			background: linear-gradient(to top, #ff8e00, #ffc901);
+
+			&:hover {
+				background: linear-gradient(to top, #da7900, #ffce19);
+			}
+
+			@include respond-to(1010px) {
+				margin: 30px 100px 10px;
+			}
+			@include respond-to(767px) {
+				margin: 10px 0px 0px;
+				width: 95%;
+			}
+			@include respond-to(479px) {
+				width: 95%;
+			}
+		}
+	}
+
+
+	&__bottom {
+		width: 1170px;
+		margin: 0 auto;
+		padding: 65px 0 0 0;
+		display: flex;
+		justify-content: space-between;
+
+		@include respond-to(1187px) {
+			width: 1060px;
+		}
+		@include respond-to(1076px) {
+			width: 992px;
+		}
+		@include respond-to(1010px) {
+			width: 750px;
+			padding: 30px 0 0 0;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		@include respond-to(767px) {
+			width: 470px;
+		}
+		@include respond-to(479px) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	&__contact {
+		text-align: center;
+		width: 270px;
+		height: 110px;
+		flex-shrink: 0;
+
+		@include respond-to(479px) {
+			margin: 0 auto;
+		}
+
+		&__text {
+			font-size: 19px;
+			color: #eee;
+		}
+		&__number {
+			font-size: 33px;
+			color: #eee;
+			padding: 15px 0 15px;
+			display: inline-block;
+			text-decoration: none;
+			font-family: 'DINPro-Black';
+		}
+		&__callback {
+			font-size: 19px;
+			color: #eee;
+			display: inline-block;
+			text-decoration: none;
+			line-height: 25px;
+			border-bottom: 1px dashed #eee;
+
+			&:hover {
+				border-bottom: none;
+			}
+		}
+	}
+
+	&__info {
+		text-align: center;
+		font-family: 'DINpro-Medium';
+		font-size: 16px;
+		line-height: 34px;
+		color: #eee;
+
+		@include respond-to(1010px) {
+			order: 3;
+			padding: 50px 0 20px 0;
+		}
+		@include respond-to(767px) {
+			// width: 470px;
+		}
+		@include respond-to(479px) {
+			// width: 100%;
+			// flex-direction: column;
+		}
+	}
+
+	&_logo {
+		width: 180px;
+		padding: 65px 0 0 0 ;
+		position: relative;
+		text-align: center;
+		flex-shrink: 0;
+
+		@include respond-to(479px) {
+			width: auto;
+			padding: 65px 0 50px;
+		}
+
+		&:before {
+		    @include sprite($png-icon-footer-logo);
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 0px;
+			width: 163px;
+			height: 66px;
+		    left: 50%;
+		    margin: 0 0 0 -82px;
+		}
+
+		&__title {
+			font-size: 22px;
+			text-transform: uppercase;
+			color: #eee;
+			font-weight: bold;
+		}
+		&__subtitle {
+			font-size: 18px;
+			font-family: 'DINpro-Medium';
+			color:#eee;
+		}
+	}
+}
+
+
+
+
+
+
+
+// *******************************
+// ************** MODAL***********
+// *******************************
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 90;
+	background: rgba(0,0,0,.7);
+	overflow-scrolling: touch;
+	overflow: auto;
+
+	&-open {
+		display: block;
+	}
+}
+
+// *	 MODEL RANGE  
+.model_range {
+	// display: none;
+	margin: 15px auto;
+	position: relative;
+	width:872px;
+	// height: 603px;
+	border:6px solid #d3a819;
+	border-radius: 5px;
+	background: #f9f8f8;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 34px 22px;
+	z-index: 100;
+	transition: top 1s ease-in-out;
+	box-shadow: 2px 0px 18px 6px rgba(0,0,0,.2);
+	
+	@include respond-to(890px) {
+		width: 100%;
+	}
+	@include respond-to(868px) {
+		width: 505px;
+	}
+	@include respond-to(510px) {
+		padding: 20px 0px;
+		width: 470px;
+	}
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&_inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include respond-to(868px) {
+			justify-content: space-around;
+		}
+	}
+
+	&__imgs {
+		width: 408px;
+		height: 392px;
+
+		@include respond-to(420px) {
+			width: 100%;
+			height: auto;
+		}
+
+		&-big {
+			width: 408px;
+			height: 291px;
+
+			@include respond-to(420px) {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&-small {
+			width: 130px;
+			height: 93px;
+			margin: 6px 4.89px 0 0; 
+
+			@include respond-to(420px) {
+				width: 32.4%;
+				height: auto;
+				margin: 1px 0px 0 0; 
+			}
+
+			&:last-child {
+				margin: 1px 0px 0 0; 
+			}
+
+		}
+	}
+
+	&__description {
+		width: 388px;
+		text-align:center;
+
+		@include respond-to(868px) {
+			margin: 20px auto 0 ;
+		}
+		@include respond-to(479px) {
+			// width: 100%;
+		}
+
+		&-title {
+			font-size: 24px;
+			line-height: 30px;
+			color: #000;
+			font-weight: bold; 
+		} 
+		&-text {
+			font-size: 19px;
+			color: #0d0d0d;
+			font-weight: bold;
+			margin: 25px 0 15px 0;
+		}
+		&-email {
+			height: 40px;
+			width: 297px;
+			font-size: 16px;
+			padding: 0 0 0 24px;
+			box-sizing: border-box;
+
+			&:focus {
+				outline: 2px solid rgba(255,201,1,.5);
+			}
+		}
+		&-number {
+			height: 40px;
+			width: 297px;
+			font-size: 16px;
+			padding: 0 0 0 24px;
+			box-sizing: border-box;
+			margin: 10px 0 24px 0;
+
+			&:focus {
+				outline: 2px solid rgba(255,201,1,.5);
+			}
+		}
+		&-list {
+			text-align: left;
+		}
+		&-item {
+			font-size: 16px;
+			line-height: 26px;
+			color: #161616;
+			font-family: 'DINpro-Medium';
+			position: relative;
+			margin: 0 0 5px 0;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				margin: 0 5px 2px 0;
+				width: 6px;
+				height: 6px;
+				border-radius: 5px;
+				background: #161616;
+			}
+		}
+		&-button {
+			width: 386px;
+			height: 60px;
+			font-size: 19px;
+			font-family: 'DINpro-Medium';
+			text-shadow: 0px  1px #ea4f00;
+			text-align: center;
+			box-sizing: border-box;
+			border-radius: 6px;
+			color: #fff;
+			line-height: 33px;
+			outline: none;
+			cursor: pointer;
+			margin: 50px 0 0 0;
+			border-top: 4px solid #e9e9e9;
+			border-right: 4px solid #e9e9e9;
+			border-left: 4px solid #e9e9e9;
+			border-bottom: 4px solid #ea4f00;
+			background: linear-gradient(to top, #ff8e00, #ffc901);
+
+			&:hover {
+				background: linear-gradient(to top, #da7900, #ffce19);
+			}
+
+			@include respond-to(420px) {
+				width: 90%; 
+			}
+		}
+	}
+
+	&__close {
+		display: inline-block;
+		position: absolute;
+		top: 8px;
+		right: 9px;
+		cursor: pointer;
+		border-radius: 25px;
+		box-shadow: 0px 0px 2px 0px rgba(0,0,0,.3);
+		@include sprite($png-icon-modal-close);
+
+		@include respond-to(868px) {
+			top: 3px;
+			right: 3px;
+		}
+	}
+}
+
+.callback {
+	@extend .model_range;
+	width: 478px;
+	height: 305px;
+	z-index: 300;
+
+	@include respond-to(479px) {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 32px;
+		color: #0d0d0d;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: 19px;
+		line-height: 21px;
+		color: #161616;
+		font-family: 'DINpro-Medium';
+	}
+
+	&__input {
+		height: 45px;
+		width: 386px;
+		font-size: 16px;
+		padding: 0 0 0 24px;
+		box-sizing: border-box;
+		margin: 50px 0 10px 0;
+
+		&:focus {
+			outline: 2px solid rgba(255,201,1,.5);
+		}
+
+		@include respond-to(420px) {
+			width: 90%; 
+		}
+	}
+
+	&-button {
+		width: 386px;
+		height: 60px;
+		font-size: 19px;
+		font-family: 'DINpro-Medium';
+		text-shadow: 0px  1px #ea4f00;
+		text-align: center;
+		box-sizing: border-box;
+		border-radius: 6px;
+		color: #fff;
+		line-height: 33px;
+		outline: none;
+		cursor: pointer;
+		margin: 10px 0 0 0;
+		border-top: 4px solid #e9e9e9;
+		border-right: 4px solid #e9e9e9;
+		border-left: 4px solid #e9e9e9;
+		border-bottom: 4px solid #ea4f00;
+		background: linear-gradient(to top, #ff8e00, #ffc901);
+
+		&:hover {
+			background: linear-gradient(to top, #da7900, #ffce19);
+		}
+
+		@include respond-to(420px) {
+			width: 90%; 
+		}
+	}
+
+	&__close {
+		display: inline-block;
+		position: absolute;
+		top: 8px;
+		right: 9px;
+		cursor: pointer;
+		border-radius: 25px;
+		box-shadow: 0px 0px 2px 0px rgba(0,0,0,.3);
+		@include sprite($png-icon-modal-close-small);
+
+		@include respond-to(868px) {
+			top: 3px;
+			right: 3px;
+		}
+	}
+}
+
+
+.lock {
+	overflow: hidden;
+}
+
+	
+.modal {
+
+	&__chioce {
+		font-size: 16px;
+		font-family: 'DINpro-Medium';
+		color: #0d0d0d;
+		text-align: left;
+		z-index: 13;
+
+		@include respond-to(479px) {
+			padding: 0 5px;
+		}
+
+		&_list {
+			font-size: 17px;
+			line-height: 21px;
+			text-align: left;
+			text-decoration: underline;
+			margin: 7px 0 5px;
+
+			@include respond-to(479px) {
+				padding: 0 5px;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&_result {
+			color: #0d0d0d;
+			font-size: 16px;
+			font-family: 'DINpro-Medium';
+			text-align: left;
+
+			@include respond-to(479px) {
+				padding: 0 5px;
+			}
+			@include respond-to(365px) {
+				padding: 0 64px 0;
+				text-align: center;
+			}
+
+			&_res {
+				color: #d00b0b;
+				font-size: 28px;
+				font-weight: bold;
+			}
+
+			
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

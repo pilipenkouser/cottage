@@ -1,0 +1,26 @@
+{
+  "name": "Template",
+  "description": "Template for web",
+  "main": "index.js",
+  "keywords": [
+    "dev"
+  ],
+  "authors": [
+    "JSMan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui-slider": "*"
+  },
+  "devDependencies": {
+    "jquery-2.2.0.min": "https://code.jquery.com/jquery-2.2.0.min.js"
+  }
+}

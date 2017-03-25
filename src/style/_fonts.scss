@@ -1,0 +1,204 @@
+@font-face{
+	font-family: 'DINpro';
+	src: url('fonts/DINpro.otf');
+	src: url('fonts/DINpro.eot?iefix') format('eot'),
+	// url('fonts/DINpro.woff') format('woff'),
+	url('fonts/DINpro.ttf') format('truetype'),
+	url('fonts/DINpro.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-Black';
+	src: url('fonts/DINPro-Black.otf');
+	src: url('fonts/DINPro-Black.eot?iefix') format('eot'),
+	// url('fonts/DINPro-Black.woff') format('woff'),
+	url('fonts/DINPro-Black.ttf') format('truetype'),
+	url('fonts/DINPro-Black.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-BlackItalic';
+	src: url('fonts/DINPro-BlackItalic.otf');
+	src: url('fonts/DINPro-BlackItalic.eot?iefix') format('eot'),
+	// url('fonts/DINPro-BlackItalic.woff') format('woff'),
+	url('fonts/DINPro-BlackItalic.ttf') format('truetype'),
+	url('fonts/DINPro-BlackItalic.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINpro';
+	src: url('fonts/DINPro-Bold.otf');
+	src: url('fonts/DINPro-Bold.eot?iefix') format('eot'),
+	// url('fonts/DINPro-Bold.woff') format('woff'),
+	url('fonts/DINPro-Bold.ttf') format('truetype'),
+	url('fonts/DINPro-Bold.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-BoldItalic.otf');
+	src: url('fonts/DINPro-BoldItalic.eot?iefix') format('eot'),
+	// url('fonts/DINPro-BoldItalic.woff') format('woff'),
+	url('fonts/DINPro-BoldItalic.ttf') format('truetype'),
+	url('fonts/DINPro-BoldItalic.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-Italic.otf');
+	src: url('fonts/DINPro-Italic.eot?iefix') format('eot'),
+	// url('fonts/DINPro-Italic.woff') format('woff'),
+	url('fonts/DINPro-Italic.ttf') format('truetype'),
+	url('fonts/DINPro-Italic.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINpro';
+	src: url('fonts/DINPro-Light.otf');
+	src: url('fonts/DINPro-Light.eot?iefix') format('eot'),
+	// url('fonts/DINPro-Light.woff') format('woff'),
+	url('fonts/DINPro-Light.ttf') format('truetype'),
+	url('fonts/DINPro-Light.svg#webfont') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-LightItalic.otf');
+	src: url('fonts/DINPro-LightItalic.eot?iefix') format('eot'),
+	// url('fonts/DINPro-LightItalic.woff') format('woff'),
+	url('fonts/DINPro-LightItalic.ttf') format('truetype'),
+	url('fonts/DINPro-LightItalic.svg#webfont') format('svg');
+	font-weight: lighter;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINpro-Medium';
+	src: url('fonts/DINPro-Medium.otf');
+	src: url('fonts/DINPro-Medium.eot?iefix') format('eot'),
+	// url('fonts/DINPro-Medium.woff') format('woff'),
+	url('fonts/DINPro-Medium.ttf') format('truetype'),
+	url('fonts/DINPro-Medium.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINpro-Medium';
+	src: url('fonts/DINPro-MediumItalic.otf');
+	src: url('fonts/DINPro-MediumItalic.eot?iefix') format('eot'),
+	// url('fonts/DINPro-MediumItalic.woff') format('woff'),
+	url('fonts/DINPro-MediumItalic.ttf') format('truetype'),
+	url('fonts/DINPro-MediumItalic.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/***************************/
+/*        DINPro-Cond      */
+/***************************/
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-Cond.otf');
+	src: url('fonts/DINPro-Cond.eot?iefix') format('eot'),
+	// url('fonts/DINPro-Cond.woff') format('woff'),
+	url('fonts/DINPro-Cond.ttf') format('truetype'),
+	url('fonts/DINPro-Cond.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-CondBlack';
+	src: url('fonts/DINPro-CondBlack.otf');
+	src: url('fonts/DINPro-CondBlack.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondBlack.woff') format('woff'),
+	url('fonts/DINPro-CondBlack.ttf') format('truetype'),
+	url('fonts/DINPro-CondBlack.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-CondBlackIta';
+	src: url('fonts/DINPro-CondBlackIta.otf');
+	src: url('fonts/DINPro-CondBlackIta.eot?iefix') format('eot'),
+	url('fonts/DINPro-CondBlackIta.woff') format('woff'),
+	// url('fonts/DINPro-CondBlackIta.ttf') format('truetype'),
+	url('fonts/DINPro-CondBlackIta.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondBold.otf');
+	src: url('fonts/DINPro-CondBold.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondBold.woff') format('woff'),
+	url('fonts/DINPro-CondBold.ttf') format('truetype'),
+	url('fonts/DINPro-CondBold.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondBoldIta.otf');
+	src: url('fonts/DINPro-CondBoldIta.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondBoldIta.woff') format('woff'),
+	url('fonts/DINPro-CondBoldIta.ttf') format('truetype'),
+	url('fonts/DINPro-CondBoldIta.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondIta.otf');
+	src: url('fonts/DINPro-CondIta.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondIta.woff') format('woff'),
+	url('fonts/DINPro-CondIta.ttf') format('truetype'),
+	url('fonts/DINPro-CondIta.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondLight.otf');
+	src: url('fonts/DINPro-CondLight.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondLight.woff') format('woff'),
+	url('fonts/DINPro-CondLight.ttf') format('truetype'),
+	url('fonts/DINPro-CondLight.svg#webfont') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondLightIta.otf');
+	src: url('fonts/DINPro-CondLightIta.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondLightIta.woff') format('woff'),
+	url('fonts/DINPro-CondLightIta.ttf') format('truetype'),
+	url('fonts/DINPro-CondLightIta.svg#webfont') format('svg');
+	font-weight: lighter;
+	font-style: italic;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondMedium.otf');
+	src: url('fonts/DINPro-CondMedium.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondMedium.woff') format('woff'),
+	url('fonts/DINPro-CondMedium.ttf') format('truetype'),
+	url('fonts/DINPro-CondMedium.svg#webfont') format('svg');
+	font-weight: medium;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'DINPro-Cond';
+	src: url('fonts/DINPro-CondMediIta.otf');
+	src: url('fonts/DINPro-CondMediIta.eot?iefix') format('eot'),
+	// url('fonts/DINPro-CondMediIta.woff') format('woff'),
+	url('fonts/DINPro-CondMediIta.ttf') format('truetype'),
+	url('fonts/DINPro-CondMediIta.svg#webfont') format('svg');
+	font-weight: medium;
+	font-style: italic;
+}

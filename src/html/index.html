@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru_RU"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Котеджный поселок</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	
+
+	<link rel="stylesheet" type="text/css" href="style/vendor.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+<body>
+
+<div class="wrapper">
+	
+	<div class="header">
+		<div class="header_logo">
+			<p class="header_logo__title">Новый Горный</p>
+			<p class="header_logo__subtitle">коттеджный посёлок</p>
+		</div>
+
+		<div class="header__menu">
+
+			<div id="hamburger" class="header__menu_toggle_button">
+				<div class="hamburger__icon">
+					<span class="hamburger__line one"></span>
+					<span class="hamburger__line two"></span>
+					<span class="hamburger__line three"></span>
+				</div>
+				<p class="hamburger__text">Menu</p>
+			</div>
+
+			<ul id="header-nav" class="nav">
+				<li class="nav__item"><a class="nav__link" href="#we_build">Варианты домов</a></li>
+				<!-- <li class="nav__item"><a class="nav__link" href="">Комплектации домов</a></li> -->
+				<li class="nav__item"><a class="nav__link" href="#calculator">Калькулятор цен</a></li>
+				<li class="nav__item"><a class="nav__link" href="#new_gorniy">О поселке</a></li>
+				<li class="nav__item"><a class="nav__link" href="#who_work">О застройщике</a></li>
+			</ul>
+
+		</div>
+		<div class="contact">
+			<p class="contact__text">Есть вопросы? Звоните!</p>
+			<a class="contact__number" href="">8 (3952) 62-15-14</a>
+			<a class="contact__callback" href="#">Обратный звонок</a>
+		</div>
+	</div>
+		
+	<div class="baner">
+		<div class="baner__content">
+			<h1 class="baner__title">Индивидуальные жилые дома в 7 км. от Иркутска от 22 300 м2</h1>
+			<div class="baner__inner">
+				<ul class="baner__advantages">
+					<li class="baner__advantages_items">
+						<i class="baner__advantages-icons svg-clock"></i>Срок строительства дома 2 месяца
+					</li>
+					<li class="baner__advantages_items baner__advantages_items-2">
+						<i class="baner__advantages-icons svg-dollar"></i>Центральные инженерные коммуникации
+					</li>
+					<li class="baner__advantages_items baner__advantages_items-3">
+						<i class="baner__advantages-icons svg-light-bulb"></i>Земельный участок входит в стоимость
+					</li>
+					<li class="baner__advantages_items baner__advantages_items-4">
+						<i class="baner__advantages-icons svg-social-infratsructure"></i>Социальная инфраструктура
+					</li>
+				</ul>
+				<div class="form_presentation">
+					<h2 class="form_presentation__title">Получите БЕСПЛАТНО подробную презентацию проектов<br>домов с ценами</h2>
+					<form action="" method="POST">
+						<input class="form_presentation__input" type="email" placeholder="Введите Ваш Email" required="">
+						<button class="form_presentation__button">Скачать презентацию</button>
+					</form>
+					<a class="form_presentation__policies" href="">Политика конфедициальности</a>
+					<div class="form_presentation__promotion">
+						<h3 class="form_presentation__promotion_text">Акция! Первым 5 покупателям <span class="form_presentation__promotion_mod">скидка 100 000 рублей!</span></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<div id="we_build" class="we_build">
+		<p class="we_build__title">Какой дом мы можем для Вас построить:</p>
+		<div id="model_range-link" class="we_build__items">
+			<div class="we_build__item item_1" data-num='49'>
+				<p class="we_build__item_size">Дом 49м2<br>7х7 м.</p>
+				<p class="we_build__item_price">Цена с участком от 950 000 руб.</p>
+				<p class="we_build__item_guarantee">Гарантия 5 лет</p>
+			</div>
+			<div class="we_build__item item_2" data-num='56'>
+				<p class="we_build__item_size">Дом 56м2<br>7х8 м.</p>
+				<p class="we_build__item_price">Цена с участком от 950 000 руб.</p>
+				<p class="we_build__item_guarantee">Гарантия 5 лет</p>
+			</div>
+			<div class="we_build__item item_3" data-num='77'>
+				<p class="we_build__item_size">Дом 77м2<br>7х11 м.</p>
+				<p class="we_build__item_price">Цена с участком от 950 000 руб.</p>
+				<p class="we_build__item_guarantee">Гарантия 5 лет</p>
+			</div>
+			<div class="we_build__item item_4" data-num='99'>
+				<p class="we_build__item_size">Дом 99м2<br>9х11 м.</p>
+				<p class="we_build__item_price">Цена с участком от 950 000 руб.</p>
+				<p class="we_build__item_guarantee">Гарантия 5 лет</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="calculator">
+		<p class="calculator__title">Калькулятор стоимости проектов</p>
+		<p class="calculator__text">Быстрый рассчет примерной стоимости дома по желаемым параметрам</p>
+		<div class="calculator__help">
+			<p class="help__title">Калькулятор проектов поможет Вам, если Вы хотите:</p>
+			<ul class="help__list">
+				<li class="help__item">Получить примерное представление, в какую сумму обойдется дом с желаемыми параметрами</li>
+				<li class="help__item">Посмотреть все проекты, подходящие Вашим параметрам</li>
+				<li class="help__item">Знать, на какую площадь и комплектцию можете рассчитывать, если распалагаете конкретной суммой</li>
+				<li class="help__item">Понимать, сколько стоят популярные опции, сколько можно сэкономить на гараже, терассе, участке и так далее</li>
+			</ul>
+		</div>
+		<div id="calculator" class="calculator_inner">
+			<div class="calc_form">
+				<div class="s_home" data-old-value="2">
+					<div class="s_home__text">
+						<p class="s_home__text_name">Площадь дома:</p>
+						<p class="s_home__text_val"><span id="s_home_result">56</span> кв.м</p>
+					</div>
+					<div class="s_home__slider">
+						<span class="s_home__slider_highlight"></span>
+					</div>
+					<div class="s_home__possible">
+						<p class="s_home__possible_min">49 кв.м</p>
+						<p class="s_home__possible_middle s_home__possible_middle-1">56 кв.м</p>
+						<p class="s_home__possible_middle s_home__possible_middle-2">77 кв.м</p>
+						<p class="s_home__possible_max">99 кв.м</p>
+					</div>
+				</div>
+				<div class="s_early" data-old-value="2">
+					<div class="s_early__text">
+						<p class="s_early__text_name">Площадь земельного участка:</p>
+						<p class="s_early__text_val"><span id="s_early_result">5</span> соток</p>
+					</div>
+					<div class="s_early__slider">
+						<span class="s_early__slider_highlight"></span>
+					</div>
+					<div class="s_early__possible">
+						<p class="s_early__possible_min">4 соток</p>
+						<p class="s_early__possible_middle">5 соток</p>
+						<p class="s_early__possible_max">6 соток</p>
+					</div>
+				</div>
+				<div class="kit">
+					<p class="kit__title">Подберите комплектацию:</p>
+					<div class="kit__items" data-old-value="1">
+						<label class="kit__items_label">Лайт
+							<input type="radio" 
+								form="mofal_calc_form"
+								name="kit" 
+								class="kit__items_radio"
+								data-num="1" 
+								checked="" 
+								value="Лайт"><span class="kit__items_span"></span>
+						</label>
+						<label class="kit__items_label">Базовая
+							<input type="radio" 
+								form="mofal_calc_form"
+								name="kit" 
+								class="kit__items_radio" 
+								data-num="2"
+								value="Базовая"><span class="kit__items_span"></span>
+						</label>
+						<label class="kit__items_label">Стандарт
+							<input type="radio" 
+								form="mofal_calc_form"
+								name="kit" 
+								class="kit__items_radio" 
+								data-num="3"
+								value="Стандарт"><span class="kit__items_span"></span>
+						</label>
+						<label class="kit__items_label">Комфорт
+							<input type="radio"
+								form="mofal_calc_form" 
+								name="kit" 
+								class="kit__items_radio" 
+								data-num="4"
+								value="Комфорт" ><span class="kit__items_span"></span>
+						</label>
+					</div>
+				</div>
+				<div class="optional">
+					<p class="optional__title">Дополнительные опции:</p>
+					<div class="optional__items">
+						<label class="carport optional__items_label" data-price="6600" data-old-value="1">Навес для авто
+							<input type="radio" 
+								form="mofal_calc_form"
+								name="carport"  
+								class="optional__items_radio" 
+								value="Навес для авто"><span class="optional__items_span"></span>
+						</label>
+						<label class="terrace optional__items_label" data-price="7700" data-old-value="1">Терасса
+							<input type="radio" 
+								form="mofal_calc_form"
+								name="terrace" 
+								class="optional__items_radio" 
+								value="Терасса"><span class="optional__items_span"></span>
+						</label>
+						<div id="radio_garage" data-old-value="1" class="optional__items" style="width: 100%;">
+							<label class="optional__items_label">Гараж на 1 авто
+								<input type="radio"
+									form="mofal_calc_form" 
+									name="garage" 
+									class="optional__items_radio garage" 
+									data-garage="1"
+									value="Гараж на 1 авто"
+									checked=""><span class="optional__items_span"></span>
+							</label>
+							<label class="optional__items_label">Гараж на 2 авто
+								<input type="radio" 
+									form="mofal_calc_form"
+									name="garage" 
+									class="optional__items_radio garage"
+									data-garage="2" 
+									value="Гараж на 2 авто" ><span class="optional__items_span"></span>
+							</label>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="culc_result">
+				<img class="culc_result__img" src="img/main-model56.jpg" alt="">
+				<p class="culc_result__text">Приблизительная цена: <span id="price_result" class="culc_result__res">1 025 000 руб.</span></p> 
+				<button class="culc_result__button">Подробнее</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="new_gorniy" class="new_gorniy">
+		<p class="new_gorniy__title">Новый Горный</p>
+		<p class="new_gorniy__text">Технологичный и функциональный поселок в 7 км от Иркутска<br>Поселок жилой, в нем уже живут люди. Вся инфраструктура построена, благоустройство сделано</p>
+		<div class="new_gorniy__items">
+
+			<div class="new_gorniy__item new_gorniy__item-1">
+
+				<i class="svg-water"></i>
+				<p class="new_gorniy__item_text">Центральное <span class="new_gorniy__item-mod">водоснабжение</span> и <span class="new_gorniy__item-mod">канализация</span></p>
+			
+			</div>
+
+			<div class="new_gorniy__item new_gorniy__item-2">
+				<i class="svg-plug"></i>
+				<p class="new_gorniy__item_text"><span class="new_gorniy__item-mod">Электричество</span> проведено подземным кабелем прямо <span class="new_gorniy__item-mod">в дом</span> - нет висячих проводов</p>
+			</div>
+
+			<div class="new_gorniy__item new_gorniy__item-3">
+				<i class="svg-cat-area"></i>
+				<p class="new_gorniy__item_text">Все <span class="new_gorniy__item-mod">участки в собственности.</span> Категория земель: ИЖС</p>
+			</div>
+
+			<div class="new_gorniy__item new_gorniy__item-4">
+			<i class="svg-lamp"></i>
+				<p class="new_gorniy__item_text"><span class="new_gorniy__item-mod">Освещение поселка</span> в темное время суток</p>
+			</div>
+
+			<div class="new_gorniy__item new_gorniy__item-5">
+				<i class="svg-wifi"></i>
+				<p class="new_gorniy__item_text"><span class="new_gorniy__item-mod">Высокоскоростной интернет</span>, в каждый дом заведено оптоволокно</p>
+			</div>
+
+			<div class="new_gorniy__item new_gorniy__item-6">
+				<i class="svg-style"></i>
+				<p class="new_gorniy__item_text">Единый архитектурный <span class="new_gorniy__item-mod">стиль</span></p>
+			</div>
+
+			<div class="new_gorniy__item new_gorniy__item-7">
+				<i class="svg-sidewalks"></i>
+				<p class="new_gorniy__item_text">Пешеходные <span class="new_gorniy__item-mod">тротуары, общественная зона и детские площадки</span></p>
+			</div>
+			<div class="new_gorniy__item new_gorniy__item-8">
+				<i class="svg-road"></i>
+				<p class="new_gorniy__item_text"><span class="new_gorniy__item-mod">Дороги</span> с твердым покрытием к каждому дому. Из центра города - до гаража своего дома без <span class="new_gorniy__item-mod">грязи</span></p>
+			</div>
+			<div class="new_gorniy__item new_gorniy__item-9">
+				<i class="svg-stop"></i>
+				<p class="new_gorniy__item_text">Контрольно-пропускной пункт. <span class="new_gorniy__item-mod">Видеонаблюдение</span></p>
+			</div>
+			<div class="new_gorniy__item new_gorniy__item-10">
+				<i class="svg-fence"></i>
+				<p class="new_gorniy__item_text"><span class="new_gorniy__item-mod">Ограждение каждого участка</span></p>
+			</div>		
+			
+		</div>
+	</div>
+
+
+	<div class="location">
+		<p class="location__title">Удобства месторасположения</p>
+		<p class="location__text">Поселок расположен на 7 километре Качугского тракта. Время пути от центра Иркутска до Вашего дома займет всего 12 минут.</p>
+		<div class="location__img_map">
+			<script type="text/javascript" charset="utf-8" async 
+				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e15c7ffd1191dcb3f4a507c7f86df71c8eeaf92ab2e7717dc32787525ec203f&amp;width=100%25&amp;height=100%&amp;lang=ru_UA&amp;scroll=true"></script>
+		</div>
+	</div>
+
+
+	<div class="infrastructure">
+		<p class="infrastructure__title">Развитая инфраструктора поселка позволит Вам в полной мере наслаждаться всеми прелестями загородной жизни не сталкиваясь с бытовыми неудобствами</p>
+
+		<div class="infrastructure__items">
+			<ul class="infrastructure__list">
+				<li class="infrastructure__list_item infrastructure__list_item-1">
+					<span class="infrastructure__list_text">До Иркутска 7 км.</span>
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-2">
+					<span class="infrastructure__list_text">Детский сад - 1,2 км.</span>
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-3">
+					<span class="infrastructure__list_text">Остановка 700 метров, 5 минут пешком
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-4">
+					<span class="infrastructure__list_text">Школа - 4,5 км.</span>
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-5">
+					<span class="infrastructure__list_text">Аптека - 4 км.</span>
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-6">
+					<span class="infrastructure__list_text">Поликлиника - 5 км.</span>
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-7">
+					<span class="infrastructure__list_text">Магазин - 100 метров</span>
+				</li>
+				<li class="infrastructure__list_item infrastructure__list_item-8">
+					<span class="infrastructure__list_text">Рынок - 6,5 км.</span>
+				</li>
+			</ul>
+		</div>
+
+		<p class="infrastructure__text">Так же на территории микрорайона Генеральным планом предусмотренны тороговый центр, предприятия сферы услуг, кафе, зоны отдыха, детские и спортивные площадки, детский сад.</p>
+		<button class="infrastructure__button">Узнать подробнее о поселке</button>
+	</div>
+
+
+	<div id="who_work" class="who_work">
+		<p class="who_work__title">Кто будет заниматься строительством?</p>
+		<p class="who_work__text">Генеральный подрядной организацией является строительная компания “Мой новый дом”.</p>
+		<div class="who_work__inner">
+			<ul class="who_work__list">
+				<li class="who_work__list_item">Опыт работы на рынке строительства и жилой недвижимости более 11 лет.</li>
+				<li class="who_work__list_item">Более 100 реализованных проектов различной сложности: от частных домов до многоквартирных жилых комплексов и торгово-развлекательных центров городского значания</li>
+				<li class="who_work__list_item">На все построенные объекты недвижимости предоставляется гарантия 5 лет</li>
+
+			</ul>
+		</div>
+	</div>
+
+
+
+	<div class="payment">
+		<p class="payment__title">Ипотека, материнский капитал, рассрочка и другие способы покупки</p>
+		<p class="payment__text">Можете выбрать любой удобный для Вас способ оплаты</p>
+		<div class="payment__tabs">
+			<div class="tabs">
+				<ul class="tabs_navigation">
+					<li class="tabs_navigation__item">
+						<a href="#tab-1" class="tabs_navigation__link tabs_navigation__link-active">Ипотека</a>
+					</li>
+					<li class="tabs_navigation__item">
+						<a href="#tab-2" class="tabs_navigation__link">Рассрочка</a>
+					</li>
+					<li class="tabs_navigation__item">
+						<a href="#tab-3" class="tabs_navigation__link">За счёт продажи существующей недвижимости</a>
+					</li>
+					<li class="tabs_navigation__item">
+						<a href="#tab-4" class="tabs_navigation__link">Материнский капитал</a>
+					</li>
+					<li class="tabs_navigation__item">
+						<a href="#tab-5" class="tabs_navigation__link">Жилищные сертификаты</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="tabs_content">
+				<div id="tab-1" class="tabs_content__item tabs_content__item-active sberbank">
+					<div class="sberbank__inner">
+						<p class="sberbank__text">Наша компания является официальным партнером ПАО “Сбербанк России”. Мы предлагаем выгодные условия ипотечного кредитования от банка партнера:</p>
+						<ul class="sberbank__list">
+							<li class="sberbank__item">Сумма кредита: от 300 000 рублей</li>
+							<li class="sberbank__item">Срок кредитования: до 30 лет</li>
+							<li class="sberbank__item">Процентная ставка: от 12% годовых в рублях</li>
+						</ul>
+						<p class="sberbank__call_action">Подать заявку на ипотеку Вы можете прямо на нашем сайте</p>
+						<button class="tabs_content__item_button">Подать заявку</button>
+					</div>
+				</div>
+
+				<div id="tab-2" class="tabs_content__item installment">
+					<div class="installment__inner">
+						
+						<ul class="installment__list">
+							<li class="installment__item">Мы предоставляем рассрочку на период строительства. Также возможно поэтапное строительство.</li>
+							<li class="installment__item">График рассрочки и поэтапного строительства согласовывается индивидуально с каждым Заказчиком</li>
+						</ul>
+						
+						<button class="tabs_content__item_button">Подать заявку</button>
+					</div>
+				</div>
+
+				<div id="tab-3" class="tabs_content__item sale">
+					<div class="sale__inner">
+						<p class="sale__text">У Вас есть уникальная возможность обменять квартиру на дом в 1,5-2 раза большей площади!<br>Всё очень просто:</p>
+						<ul class="sale__list">
+							<li class="sale__item">Мы проведем оценку вашей жилой недвижимости.</li>
+							<li class="sale__item">Продадим вашу квартиру на лучших условиях.</li>
+							<li class="sale__item">Построим дом под ключ в течение 2х месяцев.</li>
+						</ul>
+						
+						<button class="tabs_content__item_button">Подать заявку</button>
+					</div>
+				</div>
+
+				<div id="tab-4" class="tabs_content__item maternity">
+					<div class="maternity__inner">
+						<p class="maternity__text">Используйте средства материнского капитала для строительства вашего собственногово загородного дома. Материнский капитал разрешено направлять:</p>
+						<ul class="maternity__list">
+							<li class="maternity__item">На первоначальный взнос по ипотечному кредиту/займу или кредиту на строительство жилья;</li>
+							<li class="maternity__item">На погашение основного долга и процентов по ипотечному кредиту/займу или кредиту на строительство жилья</li>
+						</ul>
+						
+						<button class="tabs_content__item_button">Подать заявку</button>
+					</div>
+				</div>
+
+				<div id="tab-5" class="tabs_content__item certificates">
+					<div class="certificates__inner">
+						<p class="certificates__text">Вы можете использовать жилищный сертификат на строительство загородного дома.</p>
+						<p class="certificates__text">Жилищный сертификат может быть реализован в соответствии с Правилами использования жилищных сертификатов, утвержденными Постановлением Правительства от 21 марта 2006 года № 153 на на строительство дома, который удовлетворяет по площади требованиям получения сертификата.</p>
+						
+						<button class="tabs_content__item_button">Подать заявку</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="maps">
+		<p class="maps__title">Будем рады видеть Вас у нас в офисе:</p>
+		<div id="map" class="maps__map"></div>
+		<div class="maps__tooltip">
+			<p class="maps__adress">Наш адрес:<br>
+				<span class="maps__adress-mod">Новый Горный</span>
+			</p>
+			<ul>
+				<li class="maps_contact">
+					<li class="maps_contact__adress">г. Иркутск, ул. Байкальская, 206</li>
+					<li class="maps_contact__phone">Телефон: +7 (3952) 12-01-41</li>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+<!-- ********************************** -->
+<!-- *	 		MODAL  -->
+<!-- ********************************** -->
+
+
+<!-- ************** CALLBACK ************ -->
+<form action="" method="POST">
+	<div class="overlay">
+		<div id="callback" class="callback modal">
+			<p class="callback__title">Оставьте заявку</p>
+			<p class="callback__text">Мы перезвоним Вам в течение 30 минут</p>
+
+			<input class="callback__input" type="text" placeholder="Введите Ваш телефон">
+			<button class="callback-button">Перезвоните мне</button>
+			
+			<span class="callback__close modal-close"></span>
+		</div>
+	</div>
+</form>
+
+<!--*********** MODEL RANGE ****************-->
+<!--   49 7x7   -->
+<div class="overlay">
+	<div id="model_range-49" class="model_range modal">
+		<form action="" method="POST">
+			<div class="model_range_inner">
+				<div class="model_range__imgs">
+					<img class="model_range__imgs-big" src="img/main-madel49.png" alt="">
+					<img class="model_range__imgs-small" src="img/small1-madel49.png" alt="">
+					<img class="model_range__imgs-small" src="img/small2-madel49.png" alt="">
+					<img class="model_range__imgs-small" src="img/small3-madel49.png" alt="">
+				</div>
+				<div class="model_range__description">
+					<p class="model_range__description-title">Дом 49 кв. м<br>Размеры: 7х7 м</p>
+					<p class="model_range__description-text">Получите подробную информацию по дому</p>
+					<input class="model_range__description-email" 
+						type="email" 
+						placeholder="Введите Ваш Email"
+						required="">
+					<input class="model_range__description-number" 
+						type="text" 
+						placeholder="Введите Ваш телефон"
+						required="">
+					<ul class="model_range__description-list">
+						<li class="model_range__description-item">Мы предоставим варианты проектов планировок</li>
+						<li class="model_range__description-item">Нарисуем 3D-модель и внесем индивидуальные изменения по Вашим пожеланиям</li>
+						<li class="model_range__description-item">Поможем уложиться в бюджет и подскажем, где можем сэкономить, а где не стоит</li>
+					</ul>
+				</div>
+			</div> <!-- .model_range_inner -->
+			<button class="model_range__description-button">Получить информацию</button>
+		</form>
+		<span class="model_range__close modal-close"></span>
+	</div>
+</div>
+
+<!-- 	56 7x8	 -->
+<div class="overlay">
+	<div id="model_range-56" class="model_range modal">
+		<form action="" method="POST">
+			<div class="model_range_inner">
+				<div class="model_range__imgs">
+					<img class="model_range__imgs-big" src="img/main-model56.jpg" alt="">
+					<img class="model_range__imgs-small" src="img/small1-model56.jpg" alt="">
+					<img class="model_range__imgs-small" src="img/small2-model56.jpg" alt="">
+					<img class="model_range__imgs-small" src="img/small3-model56.jpg" alt="">
+				</div>
+				<div class="model_range__description">
+					<p class="model_range__description-title">Дом 56 кв. м<br>Размеры: 7х8 м</p>
+					<p class="model_range__description-text">Получите подробную информацию по дому</p>
+					<input class="model_range__description-email" 
+						type="email" 
+						placeholder="Введите Ваш Email"
+						required="">
+					<input class="model_range__description-number" 
+						type="text" 
+						placeholder="Введите Ваш телефон"
+						required="">
+					<ul class="model_range__description-list">
+						<li class="model_range__description-item">Мы предоставим варианты проектов планировок</li>
+						<li class="model_range__description-item">Нарисуем 3D-модель и внесем индивидуальные изменения по Вашим пожеланиям</li>
+						<li class="model_range__description-item">Поможем уложиться в бюджет и подскажем, где можем сэкономить, а где не стоит</li>
+					</ul>
+				</div>
+			</div> <!-- .model_range_inner -->
+			<button class="model_range__description-button">Получить информацию</button>
+		</form>
+		<span class="model_range__close modal-close"></span>
+	</div>
+</div>
+
+<!-- 	77 7x11	 -->
+<div class="overlay">
+	<div id="model_range-77" class="model_range modal">
+		<form action="" method="POST">
+			<div class="model_range_inner">
+				<div class="model_range__imgs">
+					<img class="model_range__imgs-big" src="img/main-model77.png" alt="">
+					<img class="model_range__imgs-small" src="img/small1-model77.png" alt="">
+					<img class="model_range__imgs-small" src="img/small2-model77.png" alt="">
+					<img class="model_range__imgs-small" src="img/small3-model77.png" alt="">
+				</div>
+				<div class="model_range__description">
+					<p class="model_range__description-title">Дом 77 кв. м<br>Размеры: 7х11 м</p>
+					<p class="model_range__description-text">Получите подробную информацию по дому</p>
+					<input class="model_range__description-email" 
+						type="email" 
+						placeholder="Введите Ваш Email"
+						required="">
+					<input class="model_range__description-number" 
+						type="text" 
+						placeholder="Введите Ваш телефон"
+						required="">
+					<ul class="model_range__description-list">
+						<li class="model_range__description-item">Мы предоставим варианты проектов планировок</li>
+						<li class="model_range__description-item">Нарисуем 3D-модель и внесем индивидуальные изменения по Вашим пожеланиям</li>
+						<li class="model_range__description-item">Поможем уложиться в бюджет и подскажем, где можем сэкономить, а где не стоит</li>
+					</ul>
+				</div>
+			</div> <!-- .model_range_inner -->
+			<button class="model_range__description-button">Получить информацию</button>
+		</form>
+		<span class="model_range__close modal-close"></span>
+	</div>
+</div>
+
+<!-- 	56 7x8	 -->
+<div class="overlay">
+	<div id="model_range-99" class="model_range modal">
+		<form action="" method="POST">
+			<div class="model_range_inner">
+				<div class="model_range__imgs">
+					<img class="model_range__imgs-big" src="img/main-model99.png" alt="">
+					<img class="model_range__imgs-small" src="img/small1-model99.png" alt="">
+					<img class="model_range__imgs-small" src="img/small2-model99.png" alt="">
+					<img class="model_range__imgs-small" src="img/small3-model99.png" alt="">
+				</div>
+				<div class="model_range__description">
+					<p class="model_range__description-title">Дом 99 кв. м<br>Размеры: 9х11 м</p>
+					<p class="model_range__description-text">Получите подробную информацию по дому</p>
+					<input class="model_range__description-email" 
+						type="email" 
+						placeholder="Введите Ваш Email"
+						required="">
+					<input class="model_range__description-number" 
+						type="text" 
+						placeholder="Введите Ваш телефон"
+						required="">
+					<ul class="model_range__description-list">
+						<li class="model_range__description-item">Мы предоставим варианты проектов планировок</li>
+						<li class="model_range__description-item">Нарисуем 3D-модель и внесем индивидуальные изменения по Вашим пожеланиям</li>
+						<li class="model_range__description-item">Поможем уложиться в бюджет и подскажем, где можем сэкономить, а где не стоит</li>
+					</ul>
+				</div>
+			</div> <!-- .model_range_inner -->
+			<button class="model_range__description-button">Получить информацию</button>
+		</form>
+		<span class="model_range__close modal-close"></span>
+	</div>
+</div>
+
+
+<!-- ****************************** -->
+<!-- ********** CALC **************-->
+<!-- ****************************** -->
+<div class="overlay">
+	<div id="calc" class="model_range modal">
+		<form id="mofal_calc_form" action="" method="POST">
+			<div class="model_range_inner">
+				<div class="model_range__imgs">
+					<img class="model_range__imgs-big" src="img/main-model56.jpg" alt="">
+					<img class="model_range__imgs-small" src="img/small1-model56.jpg" alt="">
+					<img class="model_range__imgs-small" src="img/small2-model56.jpg" alt="">
+					<img class="model_range__imgs-small" src="img/small3-model56.jpg" alt="">
+				</div>
+				<div class="model_range__description">
+
+
+					<p class="modal__chioce">Вы выбрали:</p>
+					<p class="modal__chioce_list">Дом 56 кв. м. участок 6 соток, терасса, навес для авто</p>
+					<p class="modal__chioce_result">Приблизительная цена: <span id="modal_price_result" class="modal__chioce_result_res">986 903 руб.</span></p>
+
+
+					<p class="model_range__description-text">Получите подробную информацию по дому</p>
+					<input class="model_range__description-email" 
+						type="email" 
+						placeholder="Введите Ваш Email"
+						required="">
+					<input class="model_range__description-number" 
+						type="text" 
+						placeholder="Введите Ваш телефон"
+						required="">
+
+					<ul class="model_range__description-list">
+						<li class="model_range__description-item">Мы предоставим варианты проектов планировок</li>
+						<li class="model_range__description-item">Нарисуем 3D-модель и внесем индивидуальные изменения по Вашим пожеланиям</li>
+						<li class="model_range__description-item">Поможем уложиться в бюджет и подскажем, где можем сэкономить, а где не стоит</li>
+					</ul>
+
+					<input id="modal_res_input" hidden="" type="text" name="Приблизительная цена">
+					<input id="modal_s_home_input" hidden="" type="text" value="56 кв.м" name="Площадь дома">
+					<input id="modal_s_early_input" hidden="" type="text" value="5 соток" name="Площадь участка">
+
+				</div>
+			</div> 
+			<button class="model_range__description-button">Получить информацию</button>
+		</form>
+		<span class="model_range__close modal-close"></span>
+	</div>
+</div>
+
+
+
+
+<!-- *************************************************** -->
+<!-- ********************  FOOTER  ********************* -->
+<!-- *************************************************** -->
+	<div class="footer">
+		<form action="" method="POST">
+			<div class="footer__form">
+				<p class="footer__form_title">У вас остались вопросы?</p>
+				<p class="footer__form_text">Введите свой вопрос и в течении 30 минут Вам ответит наш менеджер</p>
+				
+					<textarea required="" 
+						class="footer__form_textarea" 
+						placeholder="Введите Ваш вопрос"></textarea>
+
+					<input class="footer__form_number" 
+						type="text" 
+						placeholder="Введите Ваш телефон" 
+						required="">
+					<button class="footer__form_button">Отправить вопрос</button>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer_logo">
+					<p class="footer_logo__title">Новый Горный</p>
+					<p class="footer_logo__subtitle">коттеджный посёлок</p>
+				</div>
+
+				<div class="footer__info">
+					<p>Россия, г. Иркутск, ул. Байкальская, 206, оф. 222<br>ООО "Молодежный"<br>ИНН/КПП 3811171199/881101000<br>ОГРН 1133880088890<br>Email: moyinewdom@yandex.ru</p>
+				</div>
+
+				<div class="footer__contact">
+					<p class="footer__contact__text">Есть вопросы? Звоните!</p>
+					<a class="footer__contact__number" href="">8 (3952) 62-15-14</a>
+					<a class="footer__contact__callback" href="#">Обратный звонок</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- ********************************** -->
+<!-- *	 		END FOOTER  -->
+<!-- ********************************** -->
+
+
+	<!-- //= include/footer.html -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+	<script type="text/javascript" src="js/vendor.min.js"></script>
+
+	<script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>
